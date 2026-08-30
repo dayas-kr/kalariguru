@@ -18,12 +18,16 @@ class CoursesTable
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('name_ml')
+                    ->label('Malayalam Name')
                     ->searchable(),
                 TextColumn::make('slug')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->searchable(),
                 TextColumn::make('description_ml')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->searchable(),
                 TextColumn::make('description_en')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
