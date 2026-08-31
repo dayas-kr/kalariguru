@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Courses\Schemas;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Schema;
 
 class CourseForm
@@ -18,6 +19,12 @@ class CourseForm
                     ->required(),
                 TextInput::make('description_ml'),
                 TextInput::make('description_en'),
+                TextInput::make('duration'),
+                TextInput::make('semester_count')->numeric(),
+                FileUpload::make('image')
+                    ->image()
+                    ->directory('courses')
+                    ->disk('public')
             ]);
     }
 }
