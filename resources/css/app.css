@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
 @import "tailwindcss";
 
 @plugin '@tailwindcss/forms';
@@ -8,6 +10,18 @@
     --font-sans:
         Figtree, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-display: "Fraunces", serif;
+    --font-body: "Plus Jakarta Sans", sans-serif;
+
+    --paper: #faf6ef;
+    --paper-soft: #f1e9d8;
+    --ink: #211a14;
+    --laterite: #9c3d22;
+    --laterite-deep: #7a2e1a;
+    --moss: #3f5541;
+    --moss-deep: #24312a;
+    --sand: #e9dfc8;
+    --brass: #ad8b3e;
 }
 
 @layer base {

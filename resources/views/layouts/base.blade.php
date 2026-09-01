@@ -20,7 +20,7 @@
     @stack('styles')
 </head>
 
-<body class="antialiased">
+<body class="antialiased font-body text-(--ink) bg-(--paper)">
     <!-- Page Content -->
     <div class="min-h-screen">{{ $slot }}</div>
 
