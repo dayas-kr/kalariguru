@@ -30,4 +30,9 @@ class User extends AuthUser
             'password' => 'hashed',
         ];
     }
+
+    public function canAccessPanel(\Filament\Panel $panel): bool
+    {
+        return $this->email === env('ADMIN_EMAIL');
+    }
 }
