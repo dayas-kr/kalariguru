@@ -31,13 +31,12 @@
             </div>
 
             <div class="max-w-5xl mx-auto px-5 md:px-8">
-
                 <!-- Intro + fact ledger -->
-                <div class="grid md:grid-cols-[1fr_20rem] gap-10 md:gap-16 py-12 md:py-16 border-b border-(--sand)">
-
+                <div
+                    class="grid md:grid-cols-[1fr_20rem] gap-8 sm:gap-10 md:gap-16 py-0 sm:py-12 sm:pb-8 border-b border-(--sand)">
                     <div>
                         <!-- Breadcrumb -->
-                        <div class="max-w-5xl mx-auto mb-4">
+                        <div class="max-w-5xl mx-auto mb-6 hidden md:block">
                             <nav class="text-sm text-(--ink)/50 flex items-center gap-2">
                                 <a href="#" class="hover:text-(--laterite) transition-colors">Courses</a>
                                 <span class="text-(--ink)/25">/</span>
@@ -46,13 +45,39 @@
                         </div>
 
                         @if ($course->description_en)
-                            <p class="text-(--ink)/75 leading-relaxed text-lg max-w-[62ch] hidden sm:block">
+                            <p
+                                class="text-(--ink)/75 leading-relaxed text-lg max-w-[62ch] hidden md:block tracking-wide">
                                 {{ $course->description_en }}
                             </p>
                         @endif
+                    </div>
+
+                    <div class="">
+                        <dl class="flex flex-col bg-white h-fit rounded-xl shadow-xs">
+                            @if ($course->duration)
+                                <div class="flex items-baseline justify-between py-3 px-6 border-b border-(--sand)">
+                                    <dt class="text-sm text-(--ink)/50">Duration</dt>
+                                    <dd class="font-display text-lg text-(--ink)">{{ $course->duration }}</dd>
+                                </div>
+                            @endif
+                            @if ($course->semester_count)
+                                <div class="flex items-baseline justify-between py-3 px-6 border-b border-(--sand)">
+                                    <dt class="text-sm text-(--ink)/50">Semesters</dt>
+                                    <dd class="font-display text-lg text-(--ink)">{{ $course->semester_count }}</dd>
+                                </div>
+                            @endif
+                            @if (!is_null($course->price))
+                                <div class="flex items-baseline justify-between py-3 px-6">
+                                    <dt class="text-sm text-(--ink)/50">Fee per semester</dt>
+                                    <dd class="font-display font-semibold tracking-wider text-lg text-(--ink)">
+                                        ₹{{ \Illuminate\Support\Number::format($course->price, locale: 'en_IN') }}
+                                    </dd>
+                                </div>
+                            @endif
+                        </dl>
 
                         <a href="#"
-                            class="mt-8 inline-flex items-center gap-2 bg-(--laterite) hover:opacity-90 text-white font-medium rounded px-6 py-3 transition-opacity w-fit">
+                            class="hidden md:inline-flex items-center mt-6 gap-2 bg-(--laterite) hover:opacity-90 text-white font-medium rounded-xl px-6 py-3 transition-opacity w-full">
                             Enquire about this course
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -61,28 +86,14 @@
                         </a>
                     </div>
 
-                    <dl class="flex flex-col bg-white h-fit rounded-xl shadow-xs">
-                        @if ($course->duration)
-                            <div class="flex items-baseline justify-between py-4 px-6 border-b border-(--sand)">
-                                <dt class="text-sm text-(--ink)/50">Duration</dt>
-                                <dd class="font-display text-lg text-(--ink)">{{ $course->duration }}</dd>
-                            </div>
-                        @endif
-                        @if ($course->semester_count)
-                            <div class="flex items-baseline justify-between py-4 px-6 border-b border-(--sand)">
-                                <dt class="text-sm text-(--ink)/50">Semesters</dt>
-                                <dd class="font-display text-lg text-(--ink)">{{ $course->semester_count }}</dd>
-                            </div>
-                        @endif
-                        @if (!is_null($course->price))
-                            <div class="flex items-baseline justify-between py-4 px-6">
-                                <dt class="text-sm text-(--ink)/50">Fee per semester</dt>
-                                <dd class="font-display font-semibold tracking-wider text-lg text-(--ink)">
-                                    ₹{{ \Illuminate\Support\Number::format($course->price, locale: 'en_IN') }}
-                                </dd>
-                            </div>
-                        @endif
-                    </dl>
+                    <a href="#"
+                        class="inline-flex items-center justify-center gap-2 bg-(--laterite) hover:opacity-90 text-white font-medium rounded-xl px-6 py-2.5 transition-opacity md:hidden">
+                        Enquire about this course
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- How a semester is structured -->
@@ -91,7 +102,7 @@
                     $semesterCount = $course->semester_count ?? 1;
                     $totalClasses = $classesPerSemester * $semesterCount;
                 @endphp
-                <div class="py-12 md:py-16 border-b border-(--sand)">
+                <div class="py-6 sm:py-12 sm:pt-8 border-b border-(--sand)">
                     <h2 class="font-display text-2xl md:text-3xl text-(--ink) mb-2">How a semester works</h2>
                     <p class="text-(--ink)/60 mb-10 max-w-[55ch]">
                         Every semester runs 21 days, with a morning and evening class each day.
@@ -138,8 +149,13 @@
                     @endif
                 </div>
 
-                <!-- Semester gap info -->
+                @if ($course->description_en)
+                    <p class="text-(--ink)/75 leading-relaxed text-lg max-w-[62ch] md:hidden pt-6">
+                        {{ $course->description_en }}
+                    </p>
+                @endif
 
+                <!-- Semester gap info -->
                 <div class="py-8 border-b border-(--sand)">
                     <div class="max-w-2xl mx-auto flex items-center gap-5">
 
@@ -195,7 +211,8 @@
                                 <div @if ($index >= 6) x-show="showAllSkills" x-cloak @endif
                                     class="break-inside-avoid flex gap-5 py-5 border-b border-(--sand)
                                 hover:bg-(--sand)/30 transition-colors -mx-3 px-3">
-                                    <span class="font-display text-2xl text-(--brass) leading-none pt-0.5 w-8 shrink-0">
+                                    <span
+                                        class="font-display text-2xl text-(--brass) leading-none pt-0.5 w-8 shrink-0">
                                         {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
                                     </span>
                                     <div>
