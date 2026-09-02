@@ -17,9 +17,9 @@
             <nav x-data="{
                 links: [
                     { l: 'Home', h: '/' },
-                    { l: 'About', h: '#about' },
+                    { l: 'About', h: '{{ route('about') }}' },
                     { l: 'Courses', h: '#courses' },
-                    { l: 'Contact', h: '#contact' },
+                    { l: 'Contact', h: '{{ route('contact') }}' },
                 ]
             }" aria-label="Primary navigation" class="hidden md:flex items-center gap-1">
                 <template x-for="link in links" :key="link.l">

@@ -19,7 +19,7 @@
                 and marma, the body's vital points, under gurus trained in the
                 Vadakkan tradition of northern Kerala.
             </p>
-            <a href="#"
+            <a href="{{ route('about') }}"
                 class="inline-flex items-center gap-2 text-sm font-semibold text-(--sand) hover:text-(--paper) transition-colors">
                 Read more about our tradition
                 <x-lucide-arrow-right class="size-4" />

@@ -6,6 +6,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', WelcomeController::class)->name('home');
 
+Route::view('/about', 'about')->name('about');
+
+Route::post('/contact', function (\Illuminate\Http\Request $request) {
+    return $request->all();
+})->name('contact.store');
+
+Route::view('/contact', 'contact')->name('contact');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
