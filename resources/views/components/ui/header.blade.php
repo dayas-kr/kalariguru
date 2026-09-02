@@ -1,4 +1,11 @@
-<div style="display: contents">
+<div x-data="{
+    links: [
+        { l: 'Home', h: '/' },
+        { l: 'About', h: '{{ route('about') }}' },
+        { l: 'Courses', h: '/#courses' },
+        { l: 'Contact', h: '{{ route('contact') }}' },
+    ]
+}" style="display: contents">
     <!-- Header -->
     <header class="fixed top-0 inset-x-0 z-50 flex justify-center px-4 pt-4">
         <div
@@ -14,14 +21,7 @@
                 </span>
             </a>
 
-            <nav x-data="{
-                links: [
-                    { l: 'Home', h: '/' },
-                    { l: 'About', h: '{{ route('about') }}' },
-                    { l: 'Courses', h: '#courses' },
-                    { l: 'Contact', h: '{{ route('contact') }}' },
-                ]
-            }" aria-label="Primary navigation" class="hidden md:flex items-center gap-1">
+            <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-1">
                 <template x-for="link in links" :key="link.l">
                     <a :href="link.h" x-text="link.l"
                         class="px-3.5 py-2 rounded-full text-sm font-medium text-(--ink)/70 hover:text-(--ink) hover:bg-white/50 transition-colors"></a>
@@ -63,14 +63,7 @@
                 </button>
             </div>
 
-            <nav x-data="{
-                links: [
-                    { l: 'Home', h: '#' },
-                    { l: 'About', h: '#about' },
-                    { l: 'Courses', h: '#courses' },
-                    { l: 'Contact', h: '#contact' },
-                ]
-            }" class="flex flex-col px-5 py-6 gap-1">
+            <nav class="flex flex-col px-5 py-6 gap-1">
                 <template x-for="(link, i) in links" :key="link.l">
                     <a :href="link.h" x-text="link.l" @click="menuOpen = false"
                         class="py-3.5 text-lg font-display border-b border-(--sand)/70 text-(--ink) hover:text-(--laterite) transition-colors"></a>
