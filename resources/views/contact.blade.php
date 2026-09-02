@@ -73,9 +73,6 @@
             </div>
         </main>
 
-        <!-- Contact -->
-        <x-section.contact />
-
         <!-- Footer -->
         <x-footer />
     </div>
