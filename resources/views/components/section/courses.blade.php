@@ -1,6 +1,5 @@
 <section x-data="{ activeTab: '{{ $courses->first()->id }}' }" id="courses" class="scroll-mt-28 px-5 md:px-8 py-20 bg-(--paper-soft)">
     <div class="max-w-4xl mx-auto">
-
         <div x-data="{ visible: false }" x-intersect.threshold.15.once="visible = true"
             :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
             class="transition-all duration-700 ease-out text-center mb-10">
@@ -80,66 +79,78 @@
                         </div>
                     </div>
 
-                    <div class="pt-8 border-t border-(--sand) p-6 flex flex-col">
+                    <div class="grid grid-cols-2 gap-4 mb-6 px-6">
+                        <a href="{{ route('courses.show', $course->slug) }}" class="contents">
+                            <x-ui.button variant="secondary">
+                                Learn more <x-lucide-square-arrow-out-up-right />
+                            </x-ui.button>
+                        </a>
+                        <a href="{{ route('courses.show', $course->slug) }}" class="contents">
+                            <x-ui.button>
+                                Pricing <x-lucide-arrow-right />
+                            </x-ui.button>
+                        </a>
+                    </div>
 
-                        <p class="text-xs tracking-[0.15em] uppercase font-semibold text-(--laterite) mb-4">
-                            Included · 3-day pain relief
-                        </p>
+                    <div class="px-6 pb-6">
+                        <div class="rounded-xl border border-(--sand) bg-(--paper-soft)/60 overflow-hidden">
 
-                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div class="flex items-center justify-between px-5 py-4 border-b border-(--sand)">
+                                <div>
+                                    <div
+                                        class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-(--laterite)">
+                                        <x-lucide-sparkles class="size-3.5" />
+                                        Curriculum
+                                    </div>
 
-                            <div class="rounded-2xl bg-(--paper) border border-(--sand) p-5">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <x-lucide-sun class="size-4 text-(--brass)" />
-
-                                    <span class="text-xs tracking-[0.1em] uppercase font-semibold text-(--ink)/50">
-                                        Morning
-                                    </span>
+                                    <h4 class="font-display text-xl mt-1">
+                                        Skills you'll learn
+                                    </h4>
                                 </div>
 
-                                <h5 class="font-display text-lg mb-1">
-                                    Full-Body Dhara
-                                </h5>
-
-                                <p class="text-sm text-(--ink)/65 leading-relaxed">
-                                    A steady stream of warm oil is poured over
-                                    the body to ease pain and restore balance
-                                    after training.
-                                </p>
+                                <div class="text-right">
+                                    <div class="font-display text-2xl leading-none">
+                                        {{ $course->skills->count() }}
+                                    </div>
+                                    <div class="text-xs text-(--ink)/45 mt-1">
+                                        skills
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="rounded-2xl bg-(--paper) border border-(--sand) p-5">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <x-lucide-moon class="size-4 text-(--moss)" />
+                            <div class="grid sm:grid-cols-2">
+                                @foreach ($course->skills->take(6) as $skill)
+                                    <div
+                                        class="group flex items-center gap-3 px-5 py-3.5 border-b border-(--sand)
+                           even:sm:border-l last:border-b-0 sm:nth-last-2:border-b-0">
 
-                                    <span class="text-xs tracking-[0.1em] uppercase font-semibold text-(--ink)/50">
-                                        Evening
+                                        <span
+                                            class="flex items-center justify-center size-7 rounded-full
+                               bg-(--laterite)/8 text-(--laterite)
+                               text-xs font-semibold shrink-0
+                               group-hover:bg-(--laterite) group-hover:text-(--paper)
+                               transition-colors duration-200">
+                                            {{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}
+                                        </span>
+
+                                        <span
+                                            class="text-sm font-medium text-(--ink)/80 group-hover:text-(--ink) transition-colors">
+                                            {{ $skill->name }}
+                                        </span>
+                                    </div>
+                                @endforeach
+                            </div>
+
+                            @if ($course->skills->count() > 6)
+                                <div class="px-5 py-3 border-t border-(--sand) bg-white/40">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs font-semibold text-(--ink)/55">
+                                        <x-lucide-plus class="size-3.5" />
+                                        {{ $course->skills->count() - 6 }} more skills included
                                     </span>
                                 </div>
+                            @endif
 
-                                <h5 class="font-display text-lg mb-1">
-                                    Full-Body Steam
-                                </h5>
-
-                                <p class="text-sm text-(--ink)/65 leading-relaxed">
-                                    Time inside a herbal steam chamber to relax
-                                    the muscles and support recovery.
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mt-6">
-                            <a href="{{ route('courses.show', $course->slug) }}" class="contents">
-                                <x-ui.button variant="secondary">
-                                    Learn more <x-lucide-square-arrow-out-up-right />
-                                </x-ui.button>
-                            </a>
-                            <a href="{{ route('courses.show', $course->slug) }}" class="contents">
-                                <x-ui.button>
-                                    Pricing <x-lucide-arrow-right />
-                                </x-ui.button>
-                            </a>
                         </div>
                     </div>
                 </div>

@@ -33,7 +33,7 @@
             <div class="max-w-5xl mx-auto px-5 md:px-8">
 
                 <!-- Intro + fact ledger -->
-                <div class="grid md:grid-cols-[1fr_18rem] gap-10 md:gap-16 py-12 md:py-16 border-b border-(--sand)">
+                <div class="grid md:grid-cols-[1fr_20rem] gap-10 md:gap-16 py-12 md:py-16 border-b border-(--sand)">
 
                     <div>
                         <!-- Breadcrumb -->
@@ -46,7 +46,7 @@
                         </div>
 
                         @if ($course->description_en)
-                            <p class="text-(--ink)/75 leading-relaxed text-lg max-w-[62ch]">
+                            <p class="text-(--ink)/75 leading-relaxed text-lg max-w-[62ch] hidden sm:block">
                                 {{ $course->description_en }}
                             </p>
                         @endif
@@ -76,9 +76,10 @@
                         @endif
                         @if (!is_null($course->price))
                             <div class="flex items-baseline justify-between py-4 px-6">
-                                <dt class="text-sm text-(--ink)/50">Fee</dt>
-                                <dd class="font-display font-semibold tracking-wider text-xl text-(--ink)">
-                                    ₹{{ number_format($course->price, 2) }}</dd>
+                                <dt class="text-sm text-(--ink)/50">Fee per semester</dt>
+                                <dd class="font-display font-semibold tracking-wider text-lg text-(--ink)">
+                                    ₹{{ \Illuminate\Support\Number::format($course->price, locale: 'en_IN') }}
+                                </dd>
                             </div>
                         @endif
                     </dl>
@@ -239,7 +240,7 @@
                     </h2>
                     <p class="text-(--ink)/60 mb-10 max-w-[55ch]">
                         Every course opens with a short recovery routine, repeated morning and
-                        evening for the first three days.
+                        evening for the last three days.
                     </p>
 
                     <div class="relative">
