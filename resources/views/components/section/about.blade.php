@@ -13,11 +13,9 @@
         </div>
         <div>
             <p class="text-(--paper)/80 leading-relaxed text-lg mb-4">
-                Every morning, students step down into the sunken pit of packed
-                red earth — the same descent practised for centuries before the
-                first strike is thrown. Training moves through footwork, weapons,
-                and marma, the body's vital points, under gurus trained in the
-                Vadakkan tradition of northern Kerala.
+                Sri Gurukulam Kalari (Reg. No. 458/10) is located in Elavally village, Thrissur district,
+                Kerala. The Sri Gurukulam Kalari Sangham was founded in 2009 by Shri Vijayan M. Iyyer Gurukkal
+                (M.Com, LL.M, Senior Fellowship holder from the Ministry of Culture).
             </p>
             <a href="{{ route('about') }}"
                 class="inline-flex items-center gap-2 text-sm font-semibold text-(--sand) hover:text-(--paper) transition-colors">
