@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -8,9 +9,7 @@ Route::get('/', WelcomeController::class)->name('home');
 
 Route::view('/about', 'about')->name('about');
 
-Route::post('/contact', function (\Illuminate\Http\Request $request) {
-    return $request->all();
-})->name('contact.store');
+Route::get('/courses/{course:slug}', [CourseController::class, 'show'])->name('courses.show');
 
 Route::view('/contact', 'contact')->name('contact');
 

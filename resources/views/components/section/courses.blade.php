@@ -130,12 +130,12 @@
                         </div>
 
                         <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mt-6">
-                            <a href="#" class="contents">
+                            <a href="{{ route('courses.show', $course->slug) }}" class="contents">
                                 <x-ui.button variant="secondary">
                                     Learn more <x-lucide-square-arrow-out-up-right />
                                 </x-ui.button>
                             </a>
-                            <a href="#" class="contents">
+                            <a href="{{ route('courses.show', $course->slug) }}" class="contents">
                                 <x-ui.button>
                                     Pricing <x-lucide-arrow-right />
                                 </x-ui.button>

@@ -19,7 +19,7 @@
                     </a>
                 </div>
 
-                <form action="{{ route('contact.store') }}" method="POST" class="space-y-6 flex flex-col">
+                <form action="#" method="POST" class="space-y-6 flex flex-col">
                     @csrf
 
                     <div>
