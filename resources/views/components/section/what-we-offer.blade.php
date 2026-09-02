@@ -1,4 +1,4 @@
-<section id="offer" class="scroll-mt-28 px-5 md:px-8 py-16 max-w-6xl mx-auto">
+<section {{ $attributes->merge(['class' => 'scroll-mt-28 px-5 md:px-8 py-16 max-w-6xl mx-auto']) }} id="offer">
     <div x-data="{ visible: false }" x-intersect.threshold.15.once="visible = true"
         :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
         class="transition-all duration-700 ease-out text-center mb-14">
