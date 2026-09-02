@@ -1,40 +1,4 @@
 <x-base-layout>
-    @php
-        $offerings = [
-            [
-                'icon' => 'bed-double',
-                'title' => 'Stay',
-                'desc' =>
-                    'A 100 sq ft air-conditioned room with an attached bathroom for the full length of your course.',
-            ],
-            [
-                'icon' => 'shirt',
-                'title' => 'Dress',
-                'desc' => 'Langot and towel provided — no need to arrange training wear yourself.',
-            ],
-            [
-                'icon' => 'utensils-crossed',
-                'title' => 'Food',
-                'desc' => 'Morning tea & snacks, lunch, and dinner. Vegetarian and non-vegetarian options, every day.',
-            ],
-            [
-                'icon' => 'droplet',
-                'title' => 'Kalari Head Oil',
-                'desc' => '25ml a day, prepared in-house for the traditional head massage.',
-            ],
-            [
-                'icon' => 'droplets',
-                'title' => 'Kalari Body Oil',
-                'desc' => '100ml a day, used before training to condition and protect the body.',
-            ],
-            [
-                'icon' => 'flask-conical',
-                'title' => 'Rasayanam',
-                'desc' => '100ml a day — a herbal tonic to support recovery and build strength.',
-            ],
-        ];
-    @endphp
-
     <div x-data="{ menuOpen: false, scrolled: false }" @scroll.window="scrolled = window.scrollY > 16" @keydown.escape.window="menuOpen = false">
         <x-ui.header />
 
@@ -256,38 +220,7 @@
         </section>
 
         <!-- What We Offer -->
-        <section id="offer" class="scroll-mt-28 px-5 md:px-8 py-16 max-w-6xl mx-auto">
-            <div x-data="{ visible: false }" x-intersect.threshold.15.once="visible = true"
-                :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-                class="transition-all duration-700 ease-out text-center mb-14">
-                <span
-                    class="inline-flex items-center gap-2 pl-3 pr-4 py-1.5 rounded-full bg-(--laterite)/10 text-xs tracking-[0.15em] uppercase font-semibold text-(--laterite) mb-4">
-                    <x-lucide-hand-heart class="size-3.5" />
-                    What we offer
-                </span>
-                <h2 class="font-display text-3xl md:text-4xl mb-3">Everything is arranged for you</h2>
-                <p class="max-w-xl mx-auto text-(--ink)/65">
-                    Stay, food, dress, and daily oils — students only need to bring
-                    themselves and show up for the pit.
-                </p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                @foreach ($offerings as $item)
-                    <div x-data="{ visible: false }" x-intersect.threshold.15.once="visible = true"
-                        :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-                        class="rounded-2xl shadow-sm bg-white/50 px-6 py-4 transition-all">
-                        <div class="flex items-center gap-3">
-                            <span class="size-11 rounded-full bg-(--laterite)/10 grid place-items-center mb-4">
-                                <x-dynamic-component :component="'lucide-' . $item['icon']" class="size-5 text-(--laterite)" />
-                            </span>
-                            <h4 class="font-display text-lg mb-1.5">{{ $item['title'] }}</h4>
-                        </div>
-                        <p class="text-sm text-(--ink)/65 leading-relaxed">{{ $item['desc'] }}</p>
-                    </div>
-                @endforeach
-            </div>
-        </section>
+        <x-section.what-we-offer />
 
         <!-- Stay on. Teach. -->
         <section x-data="{ visible: false }" x-intersect.threshold.15.once="visible = true"
@@ -372,7 +305,7 @@
                         <x-lucide-swords class="size-5 text-(--laterite)" />
                     </div>
                     <h4 class="font-display text-xl mb-2">Kalaripayattu</h4>
-                    <p class="text-(--ink)/65 text-sm leading-relaxed line-clamp-4">
+                    <p class="text-(--ink)/65 text-sm leading-relaxed line-clamp-3">
                         The practice of Kalaripayattu, along with its invaluable lifestyle, is uniquely designed to
                         enhance
                         human potential and maintain the equilibrium of a person's physical, mental, and spiritual
@@ -387,7 +320,7 @@
                         <x-lucide-hand class="size-5 text-(--moss)" />
                     </div>
                     <h4 class="font-display text-xl mb-2">Kalari Marma Therapy</h4>
-                    <p class="text-(--ink)/65 text-sm leading-relaxed line-clamp-4">
+                    <p class="text-(--ink)/65 text-sm leading-relaxed line-clamp-3">
                         Kalarimarma is a wonderful way to find relief from the imbalances caused by modern lifestyles
                         and to rejuvenate both body and mind. It offers specialized treatment techniques to treat joint
                         pain, nervous disorders, and muscle or bone issues, alongside cleansing processes for body
@@ -401,7 +334,7 @@
                         <x-lucide-flower-2 class="size-5 text-(--brass)" />
                     </div>
                     <h4 class="font-display text-xl mb-2">Kalari Yoga</h4>
-                    <p class="text-(--ink)/65 text-sm leading-relaxed line-clamp-4">
+                    <p class="text-(--ink)/65 text-sm leading-relaxed line-clamp-3">
                         Yoga has served as an invaluable medical science in India for centuries. An old Malayalam saying
                         suggests that a human lifespan can be quadrupled if one consumes a natural diet—consisting
                         strictly of edible leaves, fresh fruits, and raw juices—alongside practicing Yoga between 3:30
