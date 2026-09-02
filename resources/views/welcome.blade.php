@@ -23,9 +23,6 @@
         <!-- The three pillars -->
         <x-section.pillars />
 
-        <!-- Contact -->
-        <x-section.contact />
-
         <!-- Footer -->
         <x-footer />
     </div>
