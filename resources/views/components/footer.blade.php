@@ -34,8 +34,8 @@
                         ['icon' => 'phone', 'href' => 'tel:+919020590555', 'label' => '+91 90205 90555'],
                         [
                             'icon' => 'mail',
-                            'href' => 'mailto:info@gurukulamcommunication.in',
-                            'label' => 'info@gurukulamcommunication.in',
+                            'href' => 'mailto:srigurukulamkalari@gmail.com',
+                            'label' => 'srigurukulamkalari@gmail.com',
                         ],
                         [
                             'icon' => 'instagram',
@@ -69,9 +69,9 @@
             <div>
                 <p class="text-[11px] tracking-[0.2em] uppercase text-(--paper)/50 font-semibold mb-3">Quick links</p>
                 <ul class="space-y-2 text-sm text-(--paper)/65">
-                    <li><a href="#" class="hover:text-(--paper) transition-colors">Home</a></li>
-                    <li><a href="#" class="hover:text-(--paper) transition-colors">About</a></li>
-                    <li><a href="#" class="hover:text-(--paper) transition-colors">Programs</a></li>
+                    <li><a href="{{ route('home') }}" class="hover:text-(--paper) transition-colors">Home</a></li>
+                    <li><a href="{{ route('about') }}" class="hover:text-(--paper) transition-colors">About</a></li>
+                    <li><a href="/#courses" class="hover:text-(--paper) transition-colors">Courses</a></li>
                 </ul>
             </div>
             <div>
