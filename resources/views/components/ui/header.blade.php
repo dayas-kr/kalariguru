@@ -1,8 +1,8 @@
 <div style="display: contents">
     <!-- Header -->
     <header class="fixed top-0 inset-x-0 z-50 flex justify-center px-4 pt-4">
-        <div class="w-full max-w-5xl rounded-full glass flex items-center h-16 px-4 md:px-5 transition-shadow duration-300"
-            :class="scrolled ? 'shadow-[0_8px_30px_rgba(33,26,20,0.12)]' : 'shadow-[0_2px_10px_rgba(33,26,20,0.06)]'">
+        <div
+            class="w-full max-w-5xl h-16 px-4 md:px-5 rounded-full flex items-center bg-white/55 backdrop-blur-[20px] backdrop-saturate-160 border border-white/60 transition-shadow duration-300 shadow-sm">
 
             <a href="{{ route('home') }}" aria-label="Sri Gurukulam Kalari home" class="mr-auto flex items-center gap-2.5">
                 <span class="size-9 rounded-full overflow-hidden shrink-0 block bg-(--moss) ring-1 ring-white/60">
