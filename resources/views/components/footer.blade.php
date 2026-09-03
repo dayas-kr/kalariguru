@@ -1,4 +1,10 @@
 <footer id="contact" class="bg-(--ink) text-(--paper)">
+    @push('head')
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+            integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    @endpush
+
     <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-10 md:py-14">
 
         {{-- Top: brand + address + contact --}}
@@ -31,21 +37,20 @@
             <div class="flex flex-col divide-y divide-(--paper)/10 md:divide-none md:gap-0.5 md:self-center">
                 @php
                     $links = [
-                        ['icon' => 'phone', 'href' => 'tel:+919020590555', 'label' => '+91 90205 90555'],
                         [
-                            'icon' => 'mail',
+                            'icon' => 'fa-solid fa-phone text-base',
+                            'href' => 'tel:+919020590555',
+                            'label' => '+91 90205 90555',
+                        ],
+                        [
+                            'icon' => 'fa-brands fa-whatsapp text-xl',
+                            'href' => 'tel:+919020590555',
+                            'label' => '+91 90205 90555',
+                        ],
+                        [
+                            'icon' => 'fa-regular fa-envelope text-base',
                             'href' => 'mailto:srigurukulamkalari@gmail.com',
                             'label' => 'srigurukulamkalari@gmail.com',
-                        ],
-                        [
-                            'icon' => 'instagram',
-                            'href' => 'https://www.instagram.com/gurukulamcommunication',
-                            'label' => '@gurukulamcommunication',
-                        ],
-                        [
-                            'icon' => 'youtube',
-                            'href' => 'https://youtube.com/@gurukulamcommunication?si=bx74l7ObLlhiifSV',
-                            'label' => 'Gurukulam Communication',
                         ],
                     ];
                 @endphp
@@ -54,10 +59,7 @@
                         target="{{ str_starts_with($link['href'], 'http') ? '_blank' : '_self' }}"
                         rel="{{ str_starts_with($link['href'], 'http') ? 'noopener' : '' }}"
                         class="group flex items-center gap-3 py-2.5 md:px-2.5 md:rounded-lg text-sm text-(--paper)/75 hover:text-(--paper) md:hover:bg-(--paper)/5 transition-colors">
-                        <span
-                            class="size-7 rounded-full bg-(--paper)/10 grid place-items-center shrink-0 group-hover:bg-(--paper)/15 transition-colors">
-                            <x-dynamic-component :component="'lucide-' . $link['icon']" class="size-3.5" />
-                        </span>
+                        <i class="{{ $link['icon'] }}"></i>
                         <span class="truncate">{{ $link['label'] }}</span>
                     </a>
                 @endforeach

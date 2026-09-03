@@ -5,10 +5,10 @@
         <div>
             <p class="text-xs tracking-[0.25em] uppercase text-(--sand) font-semibold mb-3 flex items-center gap-2">
                 <span class="ring-mark size-3.5 text-(--sand) shrink-0"></span>
-                About the kalari
+                About the our kalari
             </p>
             <h2 class="font-display text-3xl md:text-4xl leading-tight">
-                A red-earth pit before it's a practice
+                Break your bounds, explore your true potential.
             </h2>
         </div>
         <div>
