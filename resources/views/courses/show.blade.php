@@ -76,7 +76,7 @@
                             @endif
                         </dl>
 
-                        <a href="#"
+                        <a href="{{ route('contact') }}?course={{ $course->slug }}"
                             class="hidden md:inline-flex items-center mt-6 gap-2 bg-(--laterite) hover:opacity-90 text-white font-medium rounded-xl px-6 py-3 transition-opacity w-full">
                             Enquire about this course
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
@@ -86,7 +86,7 @@
                         </a>
                     </div>
 
-                    <a href="#"
+                    <a href="{{ route('contact') }}?course={{ $course->slug }}"
                         class="inline-flex items-center justify-center gap-2 bg-(--laterite) hover:opacity-90 text-white font-medium rounded-xl px-6 py-2.5 transition-opacity md:hidden">
                         Enquire about this course
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
