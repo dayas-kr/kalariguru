@@ -34,10 +34,14 @@
                     </h3>
 
                     <p class="text-(--ink)/65 leading-relaxed">
-                        Trained from childhood in the Vadakkan style, Antony has
-                        taught here for over two decades, guiding students through
-                        Meythari to Ankathari while overseeing marma treatments
-                        for the community.
+                        <strong class="font-semibold">Antony C.C.</strong> is an experienced Kalaripayattu and Kalari
+                        Yoga
+                        instructor with
+                        over 14 years of
+                        teaching experience. He has trained thousands of students through Sri Gurukulam Kalari Sangam,
+                        helping preserve and pass on the traditional arts of Kalaripayattu and Kalari Yoga.
+                        <a href="#" class="text-(--laterite) underline font-medium hover:no-underline">Read
+                            more</a>
                     </p>
                 </div>
 
