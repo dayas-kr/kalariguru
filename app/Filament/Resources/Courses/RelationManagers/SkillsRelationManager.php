@@ -28,6 +28,9 @@ class SkillsRelationManager extends RelationManager
                 TextInput::make('name')
                     ->required()
                     ->maxLength(255),
+                TextInput::make('type')
+                    ->required()
+                    ->numeric(),
             ]);
     }
 
