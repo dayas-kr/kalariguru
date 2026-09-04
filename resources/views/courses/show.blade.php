@@ -226,6 +226,13 @@
                                             </p>
                                         @endif
                                     </div>
+                                    <div class="shrink-0 text-right ml-auto">
+                                        <div class="text-sm font-medium tabular-nums text-neutral-900">
+                                            {{ $skill->pivot->type }}
+                                        </div>
+
+                                        <div class="text-xs text-neutral-500">types</div>
+                                    </div>
                                 </div>
                             @endforeach
                         </div>
