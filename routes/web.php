@@ -14,6 +14,15 @@ Route::get('/courses/{course:slug}', [CourseController::class, 'show'])->name('c
 
 Route::view('/contact', 'contact')->name('contact');
 
+Route::view('/kalaripayattu', 'pages.kalaripayattu')->name('kalaripayattu');
+
+Route::view('/kalari-marma-therapy', 'pages.kalari-marma-therapy')->name('kalari-marma-therapy');
+
+Route::view('/kalari-yoga', 'pages.kalari-yoga')->name('kalari-yoga');
+
+Route::post('/contact', [ContactController::class, 'store'])
+    ->name('contact.store');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -25,6 +34,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
-
-Route::post('/contact', [ContactController::class, 'store'])
-    ->name('contact.store');
