@@ -57,10 +57,8 @@
                                 {{ $course->name }}
                             </h3>
 
-                            <p class="text-(--ink)/70 leading-relaxed max-w-xl">
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Saepe quaerat est a porro
-                                eius odio vel.
+                            <p class="text-(--ink)/70 leading-relaxed max-w-xl line-clamp-3">
+                                {{ $course->description_en }}
                             </p>
 
                             <div class="font-medium text-[15px] text-(--ink)/60">
@@ -79,15 +77,10 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4 mb-6 px-6">
-                        <a href="{{ route('courses.show', $course->slug) }}" class="contents">
-                            <x-ui.button variant="secondary">
-                                Learn more <x-lucide-square-arrow-out-up-right />
-                            </x-ui.button>
-                        </a>
+                    <div class="grid mb-6 px-6">
                         <a href="{{ route('courses.show', $course->slug) }}" class="contents">
                             <x-ui.button>
-                                Pricing <x-lucide-arrow-right />
+                                Learn more <x-lucide-square-arrow-out-up-right />
                             </x-ui.button>
                         </a>
                     </div>
