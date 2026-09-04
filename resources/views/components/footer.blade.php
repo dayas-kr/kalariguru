@@ -21,8 +21,8 @@
                 </h2>
                 <address class="not-italic text-sm text-(--paper)/60 leading-relaxed max-w-xs mb-2">
                     Sri Gurukulam Kalari Sangam · Reg. No. 458/10<br>
-                    Near Ullas Nagar, Elavally<br>
-                    Thrissur, Kerala 680511
+                    Near Ullas Nagar, Elavally PIN. 680511<br>
+                    Thrissur, Kerala, India
                 </address>
                 <a href="https://maps.google.com/?q=Sri+Gurukulam+Kalari+Sangam+Elavally+Thrissur" target="_blank"
                     rel="noopener"
