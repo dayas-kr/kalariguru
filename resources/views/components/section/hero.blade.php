@@ -9,8 +9,8 @@
             Trained in the earth, <br class="hidden md:block"> passed down whole.
         </h1>
         <p class="max-w-xl mx-auto text-(--ink)/70 text-lg mb-10 leading-relaxed">
-            At Sri Gurukulam Kalari, the pit, marma healing, and yoga are one
-            discipline — taught the same way in Puvathur for generations.
+            A living tradition of Kalaripayattu, Kalari Marma therapy, and Kalari Yoga, carried forward through the
+            Gurukulam way of learning, practice, discipline, and service.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-4">
             <a href="#courses" class="contents"><x-ui.button>Visit courses</x-ui.button></a>
