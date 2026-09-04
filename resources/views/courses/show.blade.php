@@ -195,19 +195,19 @@
                 @endif
 
                 <!-- Skills, as a numbered curriculum, with a show-more toggle -->
-                @if ($course->skills->isNotEmpty())
+                @if ($skills->isNotEmpty())
                     <div class="py-12 md:py-16" x-data="{ showAllSkills: false }">
                         <h2 class="font-display text-2xl md:text-3xl text-(--ink) mb-2">
                             Skills you'll learn
                         </h2>
                         <p class="text-(--ink)/60 mb-10 max-w-[55ch]">
-                            {{ $course->skills->count() }}
-                            {{ Str::plural('skill', $course->skills->count()) }}, taught in the order
+                            {{ $skills->count() }}
+                            {{ Str::plural('skill', $skills->count()) }}, taught in the order
                             you'll train them.
                         </p>
 
                         <div class="columns-1 lg:columns-2 gap-x-12">
-                            @foreach ($course->skills as $index => $skill)
+                            @foreach ($skills as $index => $skill)
                                 <div @if ($index >= 6) x-show="showAllSkills" x-cloak @endif
                                     class="break-inside-avoid flex gap-5 py-5 border-b border-(--sand)
                                 hover:bg-(--sand)/30 transition-colors -mx-3 px-3">
@@ -230,11 +230,11 @@
                             @endforeach
                         </div>
 
-                        @if ($course->skills->count() > 6)
+                        @if ($skills->count() > 6)
                             <button @click="showAllSkills = !showAllSkills"
                                 class="mt-8 inline-flex items-center gap-2 text-(--laterite) font-medium group">
                                 <span
-                                    x-text="showAllSkills ? 'Show fewer skills' : 'Show all {{ $course->skills->count() }} skills'"></span>
+                                    x-text="showAllSkills ? 'Show fewer skills' : 'Show all {{ $skills->count() }} skills'"></span>
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="w-4 h-4 transition-transform duration-200"
                                     :class="showAllSkills ? 'rotate-180' : ''" viewBox="0 0 24 24" fill="none"
