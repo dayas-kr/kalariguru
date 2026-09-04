@@ -14,6 +14,8 @@ Route::get('/courses/{course:slug}', [CourseController::class, 'show'])->name('c
 
 Route::view('/contact', 'contact')->name('contact');
 
+Route::view('/gurukkal', 'gurukkal.show')->name('gurukkal.show');
+
 Route::view('/kalaripayattu', 'pages.kalaripayattu')->name('kalaripayattu');
 
 Route::view('/kalari-marma-therapy', 'pages.kalari-marma-therapy')->name('kalari-marma-therapy');

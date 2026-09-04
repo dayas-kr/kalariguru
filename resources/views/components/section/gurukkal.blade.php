@@ -40,7 +40,8 @@
                         over 14 years of
                         teaching experience. He has trained thousands of students through Sri Gurukulam Kalari Sangam,
                         helping preserve and pass on the traditional arts of Kalaripayattu and Kalari Yoga.
-                        <a href="#" class="text-(--laterite) underline font-medium hover:no-underline">Read
+                        <a href="{{ route('gurukkal.show') }}"
+                            class="text-(--laterite) underline font-medium hover:no-underline">Read
                             more</a>
                     </p>
                 </div>
