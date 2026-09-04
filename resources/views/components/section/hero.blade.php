@@ -13,8 +13,10 @@
             Gurukulam way of learning, practice, discipline, and service.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-4">
-            <a href="#courses" class="contents"><x-ui.button>Visit courses</x-ui.button></a>
-            <a href="#contact" class="contents"><x-ui.button variant="secondary">Visit kalari</x-ui.button></a>
+            <a href="#courses" class="contents"><x-ui.button>View courses</x-ui.button></a>
+            <a href="{{ route('contact') }}" class="contents">
+                <x-ui.button variant="secondary">Connect with us</x-ui.button>
+            </a>
         </div>
     </div>
 
