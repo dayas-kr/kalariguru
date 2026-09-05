@@ -21,7 +21,7 @@
         <x-ui.feature-card icon="shirt" title="Dress"
             desc="Langot and towel provided — no need to arrange training wear yourself." />
         <x-ui.feature-card icon="utensils-crossed" title="Food"
-            desc="Morning tea & snacks, lunch, and dinner. Vegetarian and non-vegetarian options, every day." />
+            desc="Morning tea & snacks, lunch, and dinner. Delicious vegetarian options, every day." />
         <x-ui.feature-card icon="droplet" title="Kalari Head Oil"
             desc="25ml a day, prepared in-house for the traditional head massage." />
         <x-ui.feature-card icon="droplets" title="Kalari Body Oil"

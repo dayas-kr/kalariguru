@@ -33,7 +33,7 @@
 
                         <p class="text-lg md:text-xl text-(--ink)/60 leading-relaxed max-w-2xl">
                             A teacher and practitioner dedicated to preserving and
-                            passing on the traditional arts of Kalaripayattu and
+                            passing on the traditional arts of Kalaripayattu, Kalari Marma Treatment and
                             Kalari Yoga.
                         </p>
                     </div>
@@ -65,12 +65,6 @@
                     <p>
                         His code of conduct and training strategies were amazing and helpful for
                         students to develop themselves in these art forms.
-                    </p>
-
-                    <p>
-                        A description of the skills and knowledge which he acquired in the field
-                        of kalaripayattu and kalari yoga has been mentioned on the other side of
-                        this certificate.
                     </p>
 
                     <h2>List of Various Practices of Kalaripayattu</h2>
@@ -149,7 +143,7 @@
                         <li>Kunthapayattu - 6 Numbers</li>
                         <li>Kunthapayattu - 6 Numbers</li>
                         <li>Kunthamadavukal - 12 Numbers</li>
-                        <li>Pootharasam</li>
+                        <li>Pootharasankalpam</li>
                         <li>Kalariuzhichil, Kalarichikitsa</li>
                         <li>Kalaripayattu Jeevithashaily</li>
                     </ol>

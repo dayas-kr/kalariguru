@@ -14,7 +14,7 @@
             </h2>
 
             <p class="max-w-xl mx-auto text-(--ink)/65">
-                From a 21-day introduction to a 12-year certificate path —
+                From a 21-day introduction to a 16-year certificate path —
                 every course is built from the same 21-day semester.
             </p>
         </div>
