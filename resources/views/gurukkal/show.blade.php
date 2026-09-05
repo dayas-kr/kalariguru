@@ -5,9 +5,42 @@
 
         <main class="flex-1 relative px-5 md:px-8 pt-24 md:pt-28 pb-20 overflow-hidden">
             <div class="max-w-5xl mx-auto">
-                <h1 class="text-3xl md:text-4xl font-display text-(--ink) mb-10">Gurukkal Antony CC</h1>
 
-                <article class="prose">
+                <!-- Introduction -->
+                <section x-data="{ visible: false }" x-intersect.threshold.15.once="visible = true"
+                    :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+                    class="grid md:grid-cols-[18rem_1fr] lg:grid-cols-[20rem_1fr] gap-10 md:gap-14 lg:gap-20 items-center mb-20 transition-all duration-700 ease-out">
+                    <!-- Image -->
+                    <div class="flex justify-center md:justify-start">
+                        <div
+                            class="size-56 md:size-64 lg:size-72 rounded-full overflow-hidden bg-(--sand) ring-8 ring-(--sand)/40">
+                            <img src="{{ asset('images/gurukkal/antony.jpg') }}" alt="Gurukkal Antony C.C."
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Introduction text -->
+                    <div class="text-center md:text-left">
+                        <p
+                            class="text-xs tracking-[0.25em] uppercase text-(--laterite) font-semibold mb-4 flex items-center justify-center md:justify-start gap-2">
+                            <span class="ring-mark size-3.5 text-(--laterite) shrink-0"></span>
+                            The Gurukkal
+                        </p>
+
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-(--ink) leading-[1.05] mb-5">
+                            Antony C.C.
+                        </h1>
+
+                        <p class="text-lg md:text-xl text-(--ink)/60 leading-relaxed max-w-2xl">
+                            A teacher and practitioner dedicated to preserving and
+                            passing on the traditional arts of Kalaripayattu and
+                            Kalari Yoga.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Biography -->
+                <article class="prose max-w-full">
                     <p>
                         Shri. Antony C.C., Aged 52 years, residing at Chittilappilly Kunnath House,
                         P O Elavally, Thrissur, Kerala has provided kalaripayattu and kalari yoga
@@ -141,7 +174,6 @@
             </div>
         </main>
 
-        <!-- Footer -->
         <x-footer />
     </div>
 </x-base-layout>
