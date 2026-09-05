@@ -6,6 +6,7 @@
             }
         </style>
     @endpush
+
     <div x-data="{ menuOpen: false, scrolled: false }" @scroll.window="scrolled = window.scrollY > 16" @keydown.escape.window="menuOpen = false"
         class="flex flex-col min-h-screen">
         <x-ui.header />
@@ -84,18 +85,74 @@
                         </h2>
 
                         <div class="grid xl:grid-cols-2 gap-6">
-                            <div class="bg-white border border-(--sand) rounded-xl shadow-xs xl:col-span-2">
+                            <div
+                                class="bg-white border border-(--sand) rounded-xl shadow-xs xl:col-span-2 overflow-hidden">
                                 <div
                                     class="py-2 px-6 border-b border-(--sand) flex items-center gap-3 text-(--laterite-deep)">
                                     <x-lucide-phone class="size-4.5" />
                                     <div class="text-lg font-semibold">Call us</div>
                                 </div>
-                                <div class="py-3 px-6 flex flex-wrap gap-x-3 gap-y-1 space-y-1.5">
-                                    <div class="">+91&nbsp;&nbsp;90205 90555</div>
-                                    <div class="">+91&nbsp;&nbsp;8921900143</div>
-                                    <div class="">+91&nbsp;&nbsp;94955 44869</div>
+
+                                <div class="p-6">
+                                    <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+                                        <a href="tel:+919020590555" target="_blank" rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-3 group">
+                                            <x-lucide-phone class="size-4.5 text-blue-500" />
+
+                                            <span class="flex flex-col">
+                                                <span
+                                                    class="text-xs font-medium uppercase tracking-wider text-blue-500">
+                                                    Phone
+                                                </span>
+                                                <span class="text-(--ink) group-hover:text-blue-500 transition">
+                                                    +91&nbsp;&nbsp;90205 90555
+                                                </span>
+                                            </span>
+
+                                            <x-lucide-arrow-up-right
+                                                class="size-4 text-(--ink)/40 group-hover:text-blue-500 transition" />
+                                        </a>
+                                    </div>
+
+                                    <div class="mt-5 pt-4 border-t border-(--sand) grid lg:grid-cols-2 gap-3">
+                                        <a href="https://wa.me/918921900143" target="_blank" rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-3 group">
+                                            <i class="fa-brands fa-whatsapp text-2xl text-green-600"></i>
+
+                                            <span class="flex flex-col">
+                                                <span
+                                                    class="text-xs font-medium uppercase tracking-wider text-green-700">
+                                                    WhatsApp
+                                                </span>
+                                                <span class="text-(--ink) group-hover:text-green-700 transition">
+                                                    +91&nbsp;&nbsp;89219 00143
+                                                </span>
+                                            </span>
+
+                                            <x-lucide-arrow-up-right
+                                                class="size-4 text-(--ink)/40 group-hover:text-green-600 transition" />
+                                        </a>
+                                        <a href="https://wa.me/919495544869" target="_blank" rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-3 group">
+                                            <i class="fa-brands fa-whatsapp text-2xl text-green-600"></i>
+
+                                            <span class="flex flex-col">
+                                                <span
+                                                    class="text-xs font-medium uppercase tracking-wider text-green-700">
+                                                    WhatsApp
+                                                </span>
+                                                <span class="text-(--ink) group-hover:text-green-700 transition">
+                                                    +91&nbsp;&nbsp;94955 44869
+                                                </span>
+                                            </span>
+
+                                            <x-lucide-arrow-up-right
+                                                class="size-4 text-(--ink)/40 group-hover:text-green-600 transition" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="bg-white border border-(--sand) rounded-xl shadow-xs xl:col-span-2">
                                 <div
                                     class="py-2 px-6 border-b border-(--sand) flex items-center gap-3 text-(--laterite-deep)">
