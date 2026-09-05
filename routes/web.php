@@ -22,6 +22,10 @@ Route::view('/kalari-marma-therapy', 'pages.kalari-marma-therapy')->name('kalari
 
 Route::view('/kalari-yoga', 'pages.kalari-yoga')->name('kalari-yoga');
 
+Route::view('/terms-conditions', 'pages.terms-conditions')->name('terms-conditions');
+Route::view('/privacy-policy', 'pages.privacy-policy')->name('privacy-policy');
+Route::view('/refund-policy', 'pages.refund-policy')->name('refund-policy');
+
 Route::post('/contact', [ContactController::class, 'store'])
     ->name('contact.store');
 

@@ -79,9 +79,21 @@
             <div>
                 <p class="text-[11px] tracking-[0.2em] uppercase text-(--paper)/50 font-semibold mb-3">Legal</p>
                 <ul class="space-y-2 text-sm text-(--paper)/65">
-                    <li><a href="#" class="hover:text-(--paper) transition-colors">Terms & Conditions</a></li>
-                    <li><a href="#" class="hover:text-(--paper) transition-colors">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-(--paper) transition-colors">Refund Policy</a></li>
+                    <li>
+                        <a href="{{ route('terms-conditions') }}" class="hover:text-(--paper) transition-colors">
+                            Terms & Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('privacy-policy') }}" class="hover:text-(--paper) transition-colors">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('refund-policy') }}" class="hover:text-(--paper) transition-colors">
+                            Refund Policy
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="col-span-2 md:col-span-1">
