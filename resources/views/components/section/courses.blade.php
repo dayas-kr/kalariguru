@@ -130,6 +130,11 @@
                                             class="text-sm font-medium text-(--ink)/80 group-hover:text-(--ink) transition-colors">
                                             {{ $skill->name }}
                                         </span>
+
+                                        <div class="font-sans text-(--ink)/50 text-sm ml-auto">
+                                            (<span class="font-medium text-(--ink)/75">{{ $skill->pivot->type }}</span>
+                                            types)
+                                        </div>
                                     </div>
                                 @endforeach
                             </div>
