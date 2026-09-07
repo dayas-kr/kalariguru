@@ -33,17 +33,22 @@
                         <span class="text-(--laterite)">Antony</span>
                     </h3>
 
-                    <p class="text-(--ink)/65 leading-relaxed">
+                    <p class="text-(--ink)/65 leading-relaxed line-clamp-5">
                         <strong class="font-semibold">Antony C.C.</strong> is an experienced Kalaripayattu and Kalari
-                        Yoga
-                        instructor with
-                        over 14 years of
-                        teaching experience. He has trained thousands of students through Sri Gurukulam Kalari Sangam,
-                        helping preserve and pass on the traditional arts of Kalaripayattu and Kalari Yoga.
-                        <a href="{{ route('gurukkal.show') }}"
-                            class="text-(--laterite) underline font-medium hover:no-underline">Read
-                            more</a>
+                        Shri. Antony Gurukkal has been providing Kalaripayattu and Kalari Yoga training at Sri Gurukulam
+                        Kalari Sangham since 2010.
+                        ​During this period, he has trained more than 6,000 students across various schools and colleges
+                        in the Thrissur district. Notably, students from Government schools and the National Service
+                        Scheme (NSS) received training entirely free of cost. Additionally, over 3,000 students of
+                        various age groups have been trained under his guidance in Kalaripayattu, Kalari Marma Therapy,
+                        and Kalari Yoga at the main Sri Gurukulam Kalari Sangham institute located in Elavally
+                        Panchayat.
+                        ​Furthermore, thousands of people have successfully recovered from various health issues with
+                        the support and principles of Kalari Marma Therapy.
                     </p>
+                    <a href="{{ route('gurukkal.show') }}"
+                        class="text-(--laterite) underline font-medium hover:no-underline">Read
+                        more</a>
                 </div>
 
             </div>
