@@ -33,6 +33,11 @@ class User extends AuthUser
 
     public function canAccessPanel(\Filament\Panel $panel): bool
     {
-        return $this->email === env('ADMIN_EMAIL');
+        $adminEmails = array_map(
+            'trim',
+            explode(',', env('ADMIN_EMAILS', ''))
+        );
+
+        return in_array($this->email, $adminEmails, true);
     }
 }
