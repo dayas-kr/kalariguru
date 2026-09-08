@@ -42,29 +42,36 @@
                 <!-- Biography -->
                 <article class="prose max-w-full">
                     <p>
-                        Shri. Antony C.C., Aged 52 years, residing at Chittilappilly Kunnath House,
-                        P O Elavally, Thrissur, Kerala has provided kalaripayattu and kalari yoga
-                        training for Sri Gurukulam Kalari Sangham from the year 2010 to 2023
-                        (14 years).
+                        A teacher and practitioner dedicated to preserving and passing on the
+                        traditional arts of <strong>Kalaripayattu</strong>,
+                        <strong>Kalari Marma Treatment</strong>, and <strong>Kalari Yoga</strong>.
                     </p>
 
                     <p>
-                        During this period he has provided kalaripayattu and kalari yoga training
-                        for more than 6000 students of different schools and colleges of Thrissur
-                        district among that students of Govt schools and National Service Scheme
-                        were provided with completely free of fees training.
+                        <strong>Shri. Antony Gurukkal</strong> has been providing Kalaripayattu and
+                        Kalari Yoga training at <strong>Sri Gurukulam Kalari Sangham</strong> since
+                        2010.
                     </p>
 
                     <p>
-                        Also over 3000 number of students from different age categories were
-                        trained under his guidance in kalaripayattu and kalari yoga in the kalari
-                        institute of Sri Gurukulam Kalari Sangham which is situated at Elavally
+                        During this period, he has trained more than <strong>6,000 students</strong>
+                        across various schools and colleges in the Thrissur district. Notably,
+                        students from Government schools and the National Service Scheme (NSS)
+                        received training entirely free of cost.
+                    </p>
+
+                    <p>
+                        Additionally, over <strong>3,000 students</strong> of various age groups have
+                        been trained under his guidance in Kalaripayattu, Kalari Marma Therapy, and
+                        Kalari Yoga at the main
+                        <strong>Sri Gurukulam Kalari Sangham</strong> institute located in Elavally
                         Panchayat.
                     </p>
 
                     <p>
-                        His code of conduct and training strategies were amazing and helpful for
-                        students to develop themselves in these art forms.
+                        Furthermore, <strong>thousands of people</strong> have successfully recovered
+                        from various health issues with the support and principles of Kalari Marma
+                        Therapy.
                     </p>
 
                     <h2>List of Various Practices of Kalaripayattu</h2>
