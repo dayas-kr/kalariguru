@@ -11,6 +11,8 @@ Route::get('/', WelcomeController::class)->name('home');
 
 Route::view('/about', 'about')->name('about');
 
+Route::view('/videos', 'videos.index')->name('videos.index');
+
 Route::get('/courses/{course:slug}', [CourseController::class, 'show'])->name('courses.show');
 
 Route::view('/contact', 'contact')->name('contact');

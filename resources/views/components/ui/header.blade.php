@@ -3,6 +3,7 @@
         { l: 'Home', h: '/' },
         { l: 'About', h: '{{ route('about') }}' },
         { l: 'Courses', h: '/#courses' },
+        { l: 'Videos', h: '{{ route('videos.index') }}' },
         { l: 'Contact', h: '{{ route('contact') }}' },
     ]
 }" style="display: contents">
